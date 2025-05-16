@@ -1,0 +1,11 @@
+<ion-item>
+  <ion-avatar slot="start" *ngIf="aviso.imagen">
+    <ion-img [src]="aviso.imagen"></ion-img>
+  </ion-avatar>
+  
+  <ion-label>
+    <h2>{{ aviso.titulo }}</h2>
+    <p>{{ aviso.descripcion }}</p>
+    <p>{{ aviso.fecha | dateFormat }}</p>
+  </ion-label>
+</ion-item>
