@@ -1,15 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>Avisos Comunitarios</ion-title>
+    <ion-title>Publicaciones</ion-title>
     <ion-buttons slot="end">
-      <ion-button routerLink="/aviso-form">
+      <ion-button routerLink="/aviso-formulario">
         <ion-icon name="add" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   <ion-refresher slot="fixed" (ionRefresh)="loadAvisos($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>

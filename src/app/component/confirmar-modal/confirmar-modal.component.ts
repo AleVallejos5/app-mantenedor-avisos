@@ -1,13 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonIcon, IonContent } from "@ionic/angular/standalone";
+import { IonHeader, IonToolbar, IonTitle, IonButtons, IonButton,
+   IonIcon, IonContent } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-confirmar-modal',
   templateUrl: './confirmar-modal.component.html',
   styleUrls: ['./confirmar-modal.component.scss'],
   standalone: true,
-  imports: [IonContent, IonIcon, IonButton, IonButtons, IonHeader, IonToolbar, IonTitle ]
+  imports: [IonContent, IonIcon, IonButton, IonButtons, IonHeader,
+     IonToolbar, IonTitle ]
   
 })
 export class ConfirmarModalComponent  implements OnInit {

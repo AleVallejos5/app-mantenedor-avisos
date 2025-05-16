@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/avisos"></ion-back-button>
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Nuevo Aviso</ion-title>
+    <ion-title>Publicacion</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <ion-list>
       <!-- Título -->
@@ -16,8 +16,8 @@
         <ion-input formControlName="titulo" type="text"></ion-input>
       </ion-item>
       <ion-note color="danger" *ngIf="titulo?.invalid && (titulo?.dirty || titulo?.touched)">
-        <div *ngIf="titulo?.errors?.required">El título es requerido</div>
-        <div *ngIf="titulo?.errors?.minlength">Mínimo 5 caracteres</div>
+        <div *ngIf="titulo?.errors?.['required']">El título es requerido</div>
+        <div *ngIf="titulo?.errors?.['minlength']">Mínimo 5 caracteres</div>
       </ion-note>
 
       <!-- Descripción -->
@@ -26,8 +26,8 @@
         <ion-textarea formControlName="descripcion" rows="5"></ion-textarea>
       </ion-item>
       <ion-note color="danger" *ngIf="descripcion?.invalid && (descripcion?.dirty || descripcion?.touched)">
-        <div *ngIf="descripcion?.errors?.required">La descripción es requerida</div>
-        <div *ngIf="descripcion?.errors?.minlength">Mínimo 20 caracteres</div>
+        <div *ngIf="descripcion?.errors?.['required']">La descripción es requerida</div>
+        <div *ngIf="descripcion?.errors?.['minlength']">Mínimo 20 caracteres</div>
       </ion-note>
 
       <!-- Foto -->

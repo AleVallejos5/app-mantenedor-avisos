@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     IonToolbar, IonTitle, IonContent, AvisoItemsComponent, CommonModule, FormsModule],
 })
 export class HomePage implements OnInit {
-  avisos: any[] = [];
+  avisos: Aviso[] = [];
   
   constructor(
     private avisosService: AvisosService,
